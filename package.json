@@ -1,0 +1,24 @@
+{
+  "name": "collaborative-canvas",
+  "version": "1.0.0",
+  "description": "Minimal real-time collaborative drawing canvas using Node.js, Express, Socket.io, and HTML5 Canvas.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "keywords": [
+    "canvas",
+    "realtime",
+    "socket.io",
+    "express",
+    "collaborative"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  }
+}
+
+

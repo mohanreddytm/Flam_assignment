@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Collaborative Canvas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="toolbar">
+        <button id="undoButton" title="Undo last stroke (only yours)">Undo</button>
+      </div>
+      <div id="canvas-container">
+        <canvas id="drawingCanvas"></canvas>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="canvas.js"></script>
+    <script src="websocket.js"></script>
+    <script src="main.js"></script>
+  </body>
+  </html>
+
+

@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #111827;
+  color: #e5e7eb;
+}
+
+#app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#canvas-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#drawingCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #020617;
+  cursor: crosshair;
+}
+
+#toolbar {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  padding: 6px 10px;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 999px;
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, 0.6),
+    0 0 0 1px rgba(148, 163, 184, 0.2);
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+#undoButton {
+  border: none;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #1d4ed8;
+  color: #e5e7eb;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition:
+    background 0.15s ease,
+    transform 0.1s ease,
+    box-shadow 0.15s ease;
+}
+
+#undoButton::before {
+  content: '↺';
+  font-size: 14px;
+}
+
+#undoButton:hover {
+  background: #2563eb;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.5);
+  transform: translateY(-1px);
+}
+
+#undoButton:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+}
+
+#undoButton:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+.cursor-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  margin-top: -5px;
+  border-radius: 999px;
+  pointer-events: none;
+  box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.6);
+  transition: transform 0.05s linear;
+}
+
+.cursor-dot::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  opacity: 0.7;
+}
+
+
