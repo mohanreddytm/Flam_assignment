@@ -12,7 +12,8 @@
       onCursorRemove
     } = options || {};
 
-    const socket = io();
+    // Connect directly to the deployed backend URL
+    const socket = io('https://flam-assignment-slbc.onrender.com/');
 
     let userColor = '#22c55e';
 

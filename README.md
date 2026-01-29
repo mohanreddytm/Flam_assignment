@@ -41,10 +41,10 @@ npm start
 node server/server.js
 ```
 
-Then open your browser at:
+Then open your browser at the deployed backend URL:
 
 ```text
-http://localhost:3000
+https://flam-assignment-slbc.onrender.com/
 ```
 
 ### Test real-time collaboration
@@ -55,7 +55,7 @@ http://localhost:3000
    npm start
    ```
 
-2. Open the app in two browser tabs (or two different browsers) pointing to `http://localhost:3000`.
+2. Open the app in two browser tabs (or two different browsers) pointing to `https://flam-assignment-slbc.onrender.com/`.
 3. Draw with the mouse in one tab:
    - You should see strokes appear **immediately** in that tab.
    - The same strokes should appear in the **other tab** in real time.
